@@ -1,0 +1,192 @@
+/* style.css */
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Utilitário de Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cores e Botões (Adapte para as cores da Conexel) */
+:root {
+    --primary-color: #007bff; /* Azul profissional para a Conexel */
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-bg: #f8f9fa;
+    --dark-bg: #e9ecef;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button.large {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+/* Cabeçalho Fixo (Navbar) */
+#navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky; /* Fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+#navbar nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+.dark-bg {
+    background-color: var(--dark-bg);
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(''); /* Adicione uma imagem de fundo sutil */
+    background-size: cover;
+    padding: 120px 0;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Blocos de Funcionalidade (Roadmap/Documentação) */
+#plataforma .container {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo em grid */
+    gap: 30px;
+}
+
+.feature-block {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--primary-color); /* Toque visual de "roadmap" */
+    transition: transform 0.3s ease;
+}
+
+.feature-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-block h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--dark-bg);
+    padding-bottom: 10px;
+}
+
+.o-que-e, .para-que-serve {
+    margin-bottom: 10px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* CTA Final */
+.call-to-action {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.call-to-action h2 {
+    color: white;
+}
+
+.call-to-action .contact-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
